@@ -1,0 +1,74 @@
+--- a/boards/shields/nice_view_gem/assets/images.c
++++ b/boards/shields/nice_view_gem/assets/images.c
+@@ -24,7 +24,7 @@
+ };
+ 
+ const lv_img_dsc_t bolt = {
+- .header.cf = LV_COLOR_FORMAT_I1,
++ .header.cf = LV_IMG_CF_INDEXED_1BIT,
+   .header.w = 5,
+   .header.h = 9,
+@@ -48,7 +48,7 @@
+ };
+ 
+ const lv_img_dsc_t bt = {
+- .header.cf = LV_COLOR_FORMAT_I1,
++ .header.cf = LV_IMG_CF_INDEXED_1BIT,
+   .header.w = 12,
+   .header.h = 15,
+@@ -73,7 +73,7 @@
+ };
+ 
+ const lv_img_dsc_t bt_no_signal = {
+- .header.cf = LV_COLOR_FORMAT_I1,
++ .header.cf = LV_IMG_CF_INDEXED_1BIT,
+   .header.w = 12,
+   .header.h = 15,
+@@ -100,7 +100,7 @@
+ };
+ 
+ const lv_img_dsc_t bt_unbonded = {
+- .header.cf = LV_COLOR_FORMAT_I1,
++ .header.cf = LV_IMG_CF_INDEXED_1BIT,
+   .header.w = 22,
+   .header.h = 15,
+@@ -125,7 +125,7 @@
+ };
+ 
+ const lv_img_dsc_t usb = {
+- .header.cf = LV_COLOR_FORMAT_I1,
++ .header.cf = LV_IMG_CF_INDEXED_1BIT,
+   .header.w = 20,
+   .header.h = 11,
+@@ -152,7 +152,7 @@
+ };
+ 
+ const lv_img_dsc_t gauge = {
+- .header.cf = LV_COLOR_FORMAT_I1,
++ .header.cf = LV_IMG_CF_INDEXED_1BIT,
+   .header.w = 33,
+   .header.h = 10,
+@@ -192,7 +192,7 @@
+ };
+ 
+ const lv_img_dsc_t grid = {
+- .header.cf = LV_COLOR_FORMAT_I1,
++ .header.cf = LV_IMG_CF_INDEXED_1BIT,
+   .header.w = 67,
+   .header.h = 33,
+@@ -216,7 +216,7 @@
+ };
+ 
+ const lv_img_dsc_t profiles = {
+- .header.cf = LV_COLOR_FORMAT_I1,
++ .header.cf = LV_IMG_CF_INDEXED_1BIT,
+   .header.w = 31,
+   .header.h = 3,
+--- a/boards/shields/nice_view_gem/widgets/util.h
++++ b/boards/shields/nice_view_gem/widgets/util.h
+@@ -52,4 +52,4 @@
+ void canvas_draw_line(lv_obj_t *canvas, const lv_point_t *points, uint32_t point_cnt,
+  lv_draw_line_dsc_t *line_dsc);
+ void canvas_draw_img(lv_obj_t *canvas, int32_t x, int32_t y, const void *src,
+- lv_draw_image_dsc_t *img_dsc);
++ lv_draw_img_dsc_t *img_dsc);
