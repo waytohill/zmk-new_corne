@@ -6,11 +6,11 @@ include:
 #    shield: nice_view
 #    #snippet: zmk-usb-logging    # Uncomment to log over USB.
   - board: eyelash_corne_right
-    shield: kyria_right nice_view_adapter nice_view_gem
+    shield: nice_view_adapter nice_view_gem
     cmake-args: -DZMK_EXTRA_MODULES=
     #snippet: zmk-usb-logging
   - board: eyelash_corne_left
-    shield: kyria_left nice_view_adapter nice_view_gem
+    shield: nice_view_adapter nice_view_gem
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n -DZMK_EXTRA_MODULES=
     artifact-name: eyelash_corne_studio_left
